@@ -1,0 +1,24 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+
+#box-title-dashboard-tdg{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.title-dashboard{
+    margin: 0 !important;
+    color: #04398c;
+    font-weight: bold;
+}
+
+.div-wrap{
+    width: 100vw !important;
+}
