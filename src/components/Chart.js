@@ -16,7 +16,7 @@ class Chart extends Component {
         try {
 
 
-            let pedidoUsers = await fetch('http://localhost:3001/api/users/').then(response => response.json())
+            let pedidoUsers = await fetch('http://localhost:3050/api/users/').then(response => response.json())
 
             console.log(pedidoUsers);
 

@@ -11,7 +11,7 @@ class LastMovieInDb extends Component {
 
   componentDidMount() {
 
-    fetch('http://localhost:3001/api/products/')
+    fetch('http://localhost:3050/api/products/')
       .then(response => response.json())
       .then(data => {
         this.setState({

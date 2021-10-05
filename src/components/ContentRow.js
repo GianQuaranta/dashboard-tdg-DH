@@ -59,13 +59,13 @@ class ContentRow extends Component {
         try {
 
 
-            let pedidoProducts = await fetch('http://localhost:3001/api/products/').then(response => response.json())
+            let pedidoProducts = await fetch('http://localhost:3050/api/products/').then(response => response.json())
 
             this.setState({
                 products: pedidoProducts.data,
                 productsCount: pedidoProducts.count,
-                totalBronce:pedidoProducts.countByCategory.bronce,
-                totalPlata:pedidoProducts.countByCategory.plata,
+                totalBronce: pedidoProducts.countByCategory.bronce,
+                totalPlata: pedidoProducts.countByCategory.plata,
                 totalOro: pedidoProducts.countByCategory.oro
 
             });
@@ -77,7 +77,7 @@ class ContentRow extends Component {
 
 
 
-            let pedidoUsers = await fetch('http://localhost:3001/api/users/').then(response => response.json())
+            let pedidoUsers = await fetch('http://localhost:3050/api/users/').then(response => response.json())
 
             //console.log("pedidoUsers", pedidoUsers);
 
@@ -88,8 +88,8 @@ class ContentRow extends Component {
 
             //console.log("allUsers", this.state.allUsers);
             //console.log("allUsersCount", this.state.allUsersCount);
-            
-            
+
+
 
 
 
@@ -109,18 +109,36 @@ class ContentRow extends Component {
 
         return (
 
-            <div className="row">
+            <
+            div className = "row" >
 
-            <SmallCard title={totalProducts.title} color={totalProducts.color} cuantity={this.state.productsCount} />
-            <SmallCard title={totalBronce.title} color={totalBronce.color} cuantity={this.state.totalBronce}/>
-            <SmallCard title={totalPlata.title} color={totalPlata.color} cuantity={this.state.totalPlata} />
-            <SmallCard title={totalOro.title} color={totalOro.color} cuantity={this.state.totalOro}/>
-            <SmallCard title={totalUsers.title} color={totalUsers.color} cuantity={this.state.allUsersCount}/>
-            
+            <
+            SmallCard title = { totalProducts.title }
+            color = { totalProducts.color }
+            cuantity = { this.state.productsCount }
+            />  <
+            SmallCard title = { totalBronce.title }
+            color = { totalBronce.color }
+            cuantity = { this.state.totalBronce }
+            />  <
+            SmallCard title = { totalPlata.title }
+            color = { totalPlata.color }
+            cuantity = { this.state.totalPlata }
+            />  <
+            SmallCard title = { totalOro.title }
+            color = { totalOro.color }
+            cuantity = { this.state.totalOro }
+            />  <
+            SmallCard title = { totalUsers.title }
+            color = { totalUsers.color }
+            cuantity = { this.state.allUsersCount }
+            />
 
-                
 
-            </div>
+
+
+            <
+            /div>
         )
     }
 }
